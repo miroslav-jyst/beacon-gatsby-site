@@ -24,7 +24,7 @@ export default function Nav() {
                     <Link to="/"> <img src={Logo} alt="Logo"/></Link>
                 </div>
                 
-                <nav className={isActive && "active"}>
+                <nav className={isActive ? "active" : ""}>
                     <a onClick={() => scrollAction('#how-it-works')}> Our approach </a> 
                     <a onClick={() => scrollAction('#how-it-works')}> How it works </a> 
                     <a onClick={() => scrollAction('#resources')}> Resources </a> 

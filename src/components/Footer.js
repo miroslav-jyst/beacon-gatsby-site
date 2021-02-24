@@ -13,20 +13,20 @@ export default function Footer() {
     <FooterElement>
         <div className="container">
             <div className="column">
-            <Link to="/"><img src={darkLogo} alt="Icon" /></Link>
+            <Link to="/"><img style={{width: "197px", height: "39px"}} src={darkLogo} alt="Icon" /></Link>
                 
                 <ul className="social-networks">
                     <li>
-                        <Link to=""><img src={facebookIcon} className="icon" alt="Icon" /></Link>
+                        <Link to=""><img src={facebookIcon} style={{width: "31px", height: "32px"}} className="icon" alt="Icon" /></Link>
                     </li>
                     <li>
-                        <Link to=""><img src={twitterIcon} className="icon" alt="Icon" /></Link>
+                        <Link to=""><img src={twitterIcon} style={{width: "31px", height: "32px"}} className="icon" alt="Icon" /></Link>
                     </li>
                     <li>
-                        <Link to=""><img src={linkedinIcon} className="icon" alt="Icon" /></Link>
+                        <Link to=""><img src={linkedinIcon} style={{width: "31px", height: "32px"}} className="icon" alt="Icon" /></Link>
                     </li>
                     <li>
-                        <Link to=""><img src={instagramIcon} className="icon" alt="Icon" /></Link>
+                        <Link to=""><img src={instagramIcon} style={{width: "31px", height: "32px"}} className="icon" alt="Icon" /></Link>
                     </li>
                 </ul>
             </div>
