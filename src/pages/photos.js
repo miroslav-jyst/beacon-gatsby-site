@@ -13,7 +13,7 @@ export default function HomePage() {
            image: file(relativePath: {eq: "image-2.png"}) {
                 id
                 childImageSharp {
-                    fixed (width: 200) {
+                    fixed (width: 400) {
                         ...GatsbyImageSharpFixed
                     }
                     
@@ -28,8 +28,6 @@ export default function HomePage() {
 
     return (
         <section>
-            <img src={LaptopImage} alt="Main image" />
-
             <Img 
                 fixed={data.image.childImageSharp.fixed}
             />
