@@ -75,7 +75,7 @@ const Header = styled.section`
                 background-color: #fff;
                 transform: translateX(100%);
                 flex-direction: column;
-                width: calc(100% - 2.5rem);
+                width: calc(100% - 5rem);
                 height: calc(100% - 7rem);
                 z-index: 100;
                 justify-content: center;
