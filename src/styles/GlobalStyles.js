@@ -16,6 +16,10 @@ const GlobalStyles = createGlobalStyle`
   
   body {
     font-size: 1.6rem;
+
+    &.scroll-disabled {
+      overflow-y: hidden;
+    }
   }
   
   a {

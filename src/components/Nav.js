@@ -10,6 +10,7 @@ export default function Nav() {
      
     const ToggleClass = () => {
         setActive(!isActive); 
+        document.querySelector('body').classList.toggle('scroll-disabled');
     };
     
     const scrollAction = (id) =>{
