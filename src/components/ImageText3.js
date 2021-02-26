@@ -39,7 +39,7 @@ export default function ImageText3({id, title, text}) {
                     <div className="right">
                         <h2 className="title">{title}</h2>
                         <p>{text}</p>
-                        <Link to="" className="button green">Book a now</Link>
+                        <Link to="" className="button green">Book a Demo</Link>
                     </div>
                 </div>
             </div>

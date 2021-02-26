@@ -26,7 +26,7 @@ export default function Banner({ text }) {
             <div className="container">
                 <div className="left">
                     <h1>{text}</h1>
-                    <Link to="" className="button green">Book a now</Link>
+                    <Link to="" className="button green">Book a Demo</Link>
                     <img src={trianglePurple} className="icon1" alt="Triangle Icon" />
                 </div>
                 <div className="right">
@@ -75,7 +75,6 @@ const BannerContainer = styled.section`
 
         .button {
             margin-top: 2.5rem;
-            margin-left: 1.5rem;
         
             @media only screen and (max-width: 767px) {
                 margin-left: 0;
