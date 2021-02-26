@@ -99,6 +99,7 @@ const Header = styled.section`
                 
                 @media only screen and (max-width: 1024px) {
                     color: var(--purple);
+
                 }
 
                 &:not(:last-child) {
@@ -113,7 +114,7 @@ const Header = styled.section`
 
                 &:first-child {
                     @media only screen and (max-width: 1024px) {
-                        margin-top: -8.5rem;
+                        margin-top: -5.5rem;
                     }
                 }
 
