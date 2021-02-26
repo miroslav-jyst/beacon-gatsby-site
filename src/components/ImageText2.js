@@ -1,11 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import { graphql, useStaticQuery} from 'gatsby';
+import Img from 'gatsby-image';
 
 import triangleGreen from '../assets/images/triangle-2.svg';
 import circlePurple from '../assets/images/circle-2.svg';
 
 
-export default function ImageText2({title, text1, text2, middleImage }) {
+export default function ImageText2({title, text1, text2 }) {
+    const data = useStaticQuery(graphql`
+    query Images2 {
+        image: file(relativePath: {eq: "group-image2.png"}) {
+                id
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <ImageTextContainer>
             <div className="full-container">
@@ -18,7 +33,9 @@ export default function ImageText2({title, text1, text2, middleImage }) {
                             <p>{text1}</p>
                         </div>
                         <div className="middle">   
-                            <img src={middleImage} alt="Main image" />
+                            <Img 
+                                fluid={data.image.childImageSharp.fluid}
+                            />
                         </div>
                         <div className="right">
                             <p>{text2}</p>

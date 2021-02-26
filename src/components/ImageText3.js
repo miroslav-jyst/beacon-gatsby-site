@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { graphql, useStaticQuery} from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 import bellIcon from '../assets/images/bell.svg';
@@ -7,7 +9,20 @@ import triangleGreen from '../assets/images/triangle-2.svg';
 import triangleWhite from '../assets/images/triangle-4.svg';
 
 
-export default function ImageText3({id, image, title, text}) {
+export default function ImageText3({id, title, text}) {
+    const data = useStaticQuery(graphql`
+    query Images3 {
+        image: file(relativePath: {eq: "image-3.png"}) {
+                id
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <ImageTextContainer id={id}>
             <div className="full-container">
@@ -16,7 +31,11 @@ export default function ImageText3({id, image, title, text}) {
                 <img src={triangleWhite} className="triangle-white" alt="Icon" />
 
                 <div className="container">
-                    <img src={image} alt="Main image"/>
+                    <div className="left">
+                        <Img 
+                            fluid={data.image.childImageSharp.fluid}
+                        />
+                    </div>
                     <div className="right">
                         <h2 className="title">{title}</h2>
                         <p>{text}</p>
@@ -93,6 +112,18 @@ const ImageTextContainer = styled.section`
             line-height: 2.8rem;
             font-weight: 300;
             color: var(--white);
+        }
+
+        .left {
+            width: 30%;
+
+            @media only screen and (max-width: 1024px) {
+                width: 50%;
+            }
+
+            @media only screen and (max-width: 600px) {
+                width: 75%;
+            }
         }
 
         .right {

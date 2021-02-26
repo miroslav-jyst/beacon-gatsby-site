@@ -1,14 +1,31 @@
 import React from 'react';
+import { graphql, useStaticQuery} from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 import trianglePurple from '../assets/images/triangle-1.svg'
 
 
-export default function ImageText1({id, image, title, text }) {
+export default function ImageText1({id, title, text }) {
+    const data = useStaticQuery(graphql`
+    query Images1 {
+        image: file(relativePath: {eq: "image-2.png"}) {
+                id
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <ImageTextContainer className="full-container" id={id}>
             <div className="left">
-                <img src={image} alt="Main image" />
+                <Img 
+                    fluid={data.image.childImageSharp.fluid}
+                />
             </div>
             <div className="right">
                 <h2 className="title">{title}</h2>
@@ -78,6 +95,10 @@ const ImageTextContainer = styled.section`
 
         @media only screen and (max-width: 1024px) {
             width: 100%;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            padding-left: 2.5rem;
         }
    }
 `;

@@ -1,11 +1,26 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import { Link } from 'gatsby';
+import { graphql, useStaticQuery} from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 import trianglePurple from '../assets/images/triangle-1.svg';
 
 
-export default function Banner({ image, text }) {
+export default function Banner({ text }) {
+    const data = useStaticQuery(graphql`
+        query bannerImages {
+           image: file(relativePath: {eq: "banner-image.png"}) {
+                id
+                childImageSharp {
+                    fluid (maxWidth: 530) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <BannerContainer>
             <div className="container">
@@ -15,7 +30,9 @@ export default function Banner({ image, text }) {
                     <img src={trianglePurple} className="icon1" alt="Triangle Icon" />
                 </div>
                 <div className="right">
-                    <img src={image} alt="Main Image" className="main-image" />
+                    <Img 
+                        fluid={data.image.childImageSharp.fluid}
+                    />
                 </div>
             </div>
         </BannerContainer>
