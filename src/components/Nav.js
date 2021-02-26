@@ -83,6 +83,7 @@ const Header = styled.section`
                 left: 0;
                 top: 8.5rem;
                 padding: 2.5rem;
+                overflow-y: scroll;
             }
             
             &.active {
