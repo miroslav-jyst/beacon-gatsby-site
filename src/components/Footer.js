@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="column">
             <Link to="/"><img style={{width: "197px", height: "39px"}} src={darkLogo} alt="Icon" /></Link>
                 
-                <ul className="social-networks">
+                {/* <ul className="social-networks">
                     <li>
                         <Link to=""><img src={facebookIcon} style={{width: "31px", height: "32px"}} className="icon" alt="Icon" /></Link>
                     </li>
@@ -28,7 +28,7 @@ export default function Footer() {
                     <li>
                         <Link to=""><img src={instagramIcon} style={{width: "31px", height: "32px"}} className="icon" alt="Icon" /></Link>
                     </li>
-                </ul>
+                </ul> */}
             </div>
             <div className="column">
                 <h3>Pages</h3>
@@ -47,7 +47,7 @@ export default function Footer() {
                 </ul>
             </div>
             <div className="column">
-                <h3>Sign up to out newsletter!</h3>
+                <h3>Sign up to our newsletter!</h3>
                 <form action="">
                     <input type="email" placeholder="Enter your email" id="fname" className="email-input" name="email"/>
                     <input type="submit" className="submit-button" value="Subscribe"/>
