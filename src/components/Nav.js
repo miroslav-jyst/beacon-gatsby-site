@@ -44,6 +44,7 @@ const Header = styled.section`
     left: 10rem;
     top: 5rem;
     width: calc(100% - 20rem);
+    z-index: 1000;
 
     @media only screen and (max-width: 1024px) {
         left: 0;

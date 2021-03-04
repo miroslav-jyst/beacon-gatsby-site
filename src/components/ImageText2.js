@@ -132,6 +132,11 @@ const ImageTextContainer = styled.section`
             background-color: rgba(0, 0, 0, 0.03);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 1rem;
+
+            @media only screen and (max-width: 767px) {
+                font-size: 1.6rem;
+                line-height: 2rem;
+            }  
         }
     }
 
@@ -141,6 +146,7 @@ const ImageTextContainer = styled.section`
         @media only screen and (max-width: 767px) {
             width: 15rem;
             margin: 0;
+            display: none;
         }
     }
 `;

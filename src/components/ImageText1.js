@@ -75,6 +75,11 @@ const ImageTextContainer = styled.section`
        line-height: 2.8rem;
        font-weight: 300;
        color: var(--textBlack);
+
+       @media only screen and (max-width: 767px) {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }  
    }
    
    .title {
@@ -100,5 +105,9 @@ const ImageTextContainer = styled.section`
         @media only screen and (min-width: 1024px) {
             padding-left: 2.5rem;
         }
+
+       @media only screen and (max-width: 767px) {
+            padding: 0 2rem;
+        }  
    }
 `;

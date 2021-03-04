@@ -22,12 +22,12 @@ export default function WhyUseCardSection({ id, title }) {
 
                 <WhyUseCard
                     icon={icon3}
-                    text="Beacon provides your team with the correct resources to reduce stress, loneliness and isolation in the new normal."
+                    text="Beacon provides your team with the correct resources to reduce stress, loneliness and isolation."
                 />
 
                 <WhyUseCard 
                     icon={icon2}
-                    text="Beacon tailors Employee Wellbeing improving a team's retention, productivity and engagement."
+                    text="Beacon tailors employee wellbeing improving a team cohesion, productivity and engagement."
                 />
             </div>
         </WhyUseWrapper>

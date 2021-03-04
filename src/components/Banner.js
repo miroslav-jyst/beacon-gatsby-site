@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 import trianglePurple from '../assets/images/triangle-1.svg';
+import background from '../assets/images/home-bg.svg';
 
 
 export default function Banner({ text }) {
@@ -43,14 +44,18 @@ export default function Banner({ text }) {
 const BannerContainer = styled.section`
     padding-top: 15rem;
     padding-bottom: 8rem;
-    background: linear-gradient(180deg, #3C44B1 0%, #362D7D 100%);
+    background-image: url(${background});
+    position: relative;
+    padding: 15rem 0;
+    background-size: cover;
+    background-position: bottom;
 
     .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 767px) {
             flex-direction: column-reverse;
         }
 
@@ -114,6 +119,18 @@ const BannerContainer = styled.section`
                 width: 100%;
                 text-align: center;
                 margin-left: 0;
+            }
+
+            img { 
+                @media only screen and (max-width: 767px) {
+                    width: 20rem !important;
+                    height: auto !important;
+                }   
+            }
+            div { 
+                @media only screen and (max-width: 767px) {
+                    padding-bottom: 50% !important;
+                }   
             }
         }
    }

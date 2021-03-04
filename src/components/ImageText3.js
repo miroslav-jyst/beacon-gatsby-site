@@ -4,6 +4,7 @@ import { graphql, useStaticQuery} from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 
+import background from '../assets/images/anouncement-bg.svg';
 import bellIcon from '../assets/images/bell.svg';
 import triangleGreen from '../assets/images/triangle-2.svg';
 import triangleWhite from '../assets/images/triangle-4.svg';
@@ -49,30 +50,33 @@ export default function ImageText3({id, title, text}) {
 
 
 const ImageTextContainer = styled.section`
-    background: linear-gradient(180deg, #3C44B1 0%, #362D7D 100%);
+    /* background: linear-gradient(180deg, #3C44B1 0%, #362D7D 100%); */
+    /* background-image: url('../assets/images/bg-beacon-1.png'); */
+    background-image: url(${background});
     position: relative;
-    padding: 5rem 0;
+    padding: 15rem 0;
+    background-size: cover;
 
     .bell-icon {
         position: absolute;
-        top: 0;
+        top: 100px;
         left: 37%; 
 
         @media only screen and (max-width: 767px) {
             width: 10rem;
             left: 40%;
-            top: -2rem;
+            top: 6rem;
         }
     }
 
     .triangle-white {
         position: absolute;
-        top: -7rem;
-        left: 42%;
+        top: 1rem;
+        left: 45%;
         
         @media only screen and (max-width: 767px) {
             width: 15rem;
-            top: -2rem;
+            top: 9rem;
             right: 2rem;
             left: auto;
         }
@@ -93,6 +97,7 @@ const ImageTextContainer = styled.section`
     .container {
         display: flex;
         margin-top: 5rem;
+        align-items: center;
         justify-content: space-between;
 
         @media only screen and (max-width: 1024px) {
@@ -112,13 +117,20 @@ const ImageTextContainer = styled.section`
             line-height: 2.8rem;
             font-weight: 300;
             color: var(--white);
+
+            @media only screen and (max-width: 767px) {
+                font-size: 1.6rem;
+                line-height: 2rem;
+            }  
         }
 
         .left {
-            width: 30%;
+            width: 40%;
+            margin-top: 10rem;
 
             @media only screen and (max-width: 1024px) {
                 width: 50%;
+                margin-top: 0;
             }
 
             @media only screen and (max-width: 600px) {
